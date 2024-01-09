@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Next Daisy Template",
@@ -12,8 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh">
-      <body className="h-full min-h-screen">{children}</body>
+    <html lang="zh" suppressHydrationWarning>
+      <body className="h-full min-h-screen">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
