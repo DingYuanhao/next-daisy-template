@@ -17,6 +17,12 @@ export default function NavBar() {
       >
         DashBoard
       </button>
+      <button
+        className="btn btn-ghost"
+        onClick={() => router.push("/fetching")}
+      >
+        Data Fetching
+      </button>
       <ThemeToggler />
       <button className="btn btn-ghost">settings</button>
     </nav>
