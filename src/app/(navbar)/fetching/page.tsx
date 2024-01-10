@@ -1,6 +1,6 @@
 import ClientSide from "./client";
 
-export async function getData() {
+async function getData() {
   const res = await fetch("http://api.github.com/zen");
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.

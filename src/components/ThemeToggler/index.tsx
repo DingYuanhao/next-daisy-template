@@ -22,7 +22,7 @@ export const ThemeToggler = () => {
 
   const handleClick = (chosenTheme: ThemeType) => {
     setTheme(chosenTheme);
-    const elem = document.activeElement;
+    const elem = document.activeElement as HTMLElement;
     if (elem) {
       elem?.blur();
     }

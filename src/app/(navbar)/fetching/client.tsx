@@ -1,8 +1,20 @@
 'use client';
 
 import { useState } from "react";
-import { getData } from "./page";
 import { useEffectOnce } from "usehooks-ts";
+
+async function getData() {
+  const res = await fetch("http://api.github.com/zen");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.text();
+}
 
 export default function ClientSide() {
   const [data, setData] = useState("");
