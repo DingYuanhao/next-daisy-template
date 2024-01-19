@@ -17,7 +17,7 @@ export default function RootLayout({
           </div>
         }
       >
-        <div className="flex flex-col rounded-xl p-4 m-4 w-full overflow-scroll bg-base-200">
+        <div className="flex flex-col rounded-xl p-4 w-full bg-base-100">
           {children}
         </div>
       </Suspense>
